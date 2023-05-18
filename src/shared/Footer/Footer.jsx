@@ -10,8 +10,8 @@ import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="grid grid-cols-4 gap-8 items-center">
+    <footer className="space-y-4">
+      <div className="grid grid-cols-4 items-center justify-items-center">
         {/* div 1 starts */}
         <div className="space-y-8">
           <div className="flex items-center gap-4">
@@ -74,7 +74,7 @@ const Footer = () => {
         {/* div 4 Stars */}
         <div className="space-y-8">
           <h1 className="font-extrabold text-3xl">Newsletter</h1>
-          <div className="form-control w-80 space-y-4">
+          <div className="form-control space-y-4">
             <label className="label">
               <p>Enter your email address</p>
             </label>
