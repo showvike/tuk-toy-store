@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
   const { loginWithEmail, loginWithGoogle } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleEmailLogin = (event) => {
     event.preventDefault();
@@ -16,9 +18,12 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setError("");
+        navigate("/");
       })
       .catch((error) => {
-        console.log(error);
+        const message = error.message;
+        setError(message);
       });
   };
 
@@ -27,9 +32,12 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setError("");
+        navigate("/");
       })
       .catch((error) => {
-        console.log(error);
+        const message = error.message;
+        setError(message);
       });
   };
 
@@ -55,6 +63,7 @@ const Login = () => {
                   placeholder="email"
                   className="input input-bordered"
                   name="email"
+                  required
                 />
               </div>
               <div className="form-control">
@@ -66,6 +75,7 @@ const Login = () => {
                   placeholder="password"
                   className="input input-bordered"
                   name="password"
+                  required
                 />
               </div>
               <div className="form-control mt-6">
@@ -97,6 +107,7 @@ const Login = () => {
             </div>
           </div>
         </div>
+        {error && <p className="text-error font-semibold">{error}</p>}
       </div>
     </div>
   );

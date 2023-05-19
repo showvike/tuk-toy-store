@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import defImg from "../../assets/default-image.avif";
 import logo from "../../assets/logo.png";
 import { AuthContext } from "../../providers/AuthProvider";
 
@@ -41,10 +42,13 @@ const Nav = () => {
             {user ? (
               <div
                 className="tooltip tooltip-right tooltip-info"
-                data-tip={user.displayName}
+                data-tip={user.displayName ? user.displayName : null}
               >
                 <button onClick={handleLogout}>
-                  <img className="w-12 rounded-full" src={user.photoURL} />
+                  <img
+                    className="w-12 rounded-full"
+                    src={user.photoURL ? user.photoURL : defImg}
+                  />
                 </button>
               </div>
             ) : (

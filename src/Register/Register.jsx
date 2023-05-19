@@ -1,6 +1,46 @@
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Register = () => {
+  const { register, update } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleRegister = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const photoUrl = form.photoUrl.value;
+    console.log(name, email, password, photoUrl);
+    if (password.length < 6) {
+      setError("Error: Password is less than six characters.");
+      return;
+    }
+    register(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        setError("");
+        update(name, photoUrl)
+          .then(() => {
+            setError("");
+            navigate("/");
+            navigate(0);
+          })
+          .catch((error) => {
+            const message = error.message;
+            setError(message);
+          });
+      })
+      .catch((error) => {
+        const message = error.message;
+        setError(message);
+      });
+  };
+
   return (
     <div className="hero h-[85vh]">
       <div className="hero-content">
@@ -9,7 +49,7 @@ const Register = () => {
             <h1 className="text-5xl font-extrabold text-center">
               Please Register!
             </h1>
-            <form>
+            <form onSubmit={handleRegister}>
               <div className="grid grid-cols-2 gap-8">
                 <div className="form-control">
                   <label className="label">
@@ -19,6 +59,8 @@ const Register = () => {
                     type="text"
                     placeholder="name"
                     className="input input-bordered"
+                    required
+                    name="name"
                   />
                 </div>
                 <div className="form-control">
@@ -29,6 +71,8 @@ const Register = () => {
                     type="email"
                     placeholder="email"
                     className="input input-bordered"
+                    required
+                    name="email"
                   />
                 </div>
                 <div className="form-control">
@@ -39,9 +83,10 @@ const Register = () => {
                     type="password"
                     placeholder="password"
                     className="input input-bordered"
+                    required
+                    name="password"
                   />
                 </div>
-
                 <div className="form-control">
                   <label className="label">
                     <span>Photo URL</span>
@@ -50,6 +95,8 @@ const Register = () => {
                     type="text"
                     placeholder="photo url"
                     className="input input-bordered"
+                    required
+                    name="photoUrl"
                   />
                 </div>
               </div>
@@ -70,6 +117,9 @@ const Register = () => {
                 .
               </p>
             </div>
+            {error && (
+              <p className="text-error font-semibold text-center">{error}</p>
+            )}
           </div>
         </div>
       </div>
