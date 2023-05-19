@@ -1,6 +1,6 @@
-import dc from "../../assets/dc.webp";
-import ironMan from "../../assets/iron-man.webp";
-import starWars from "../../assets/star-wars.webp";
+import dc from "../../../assets/dc.webp";
+import ironMan from "../../../assets/iron-man.webp";
+import starWars from "../../../assets/star-wars.webp";
 
 const Banner = () => {
   return (

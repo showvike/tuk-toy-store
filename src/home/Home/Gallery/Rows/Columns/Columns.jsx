@@ -1,8 +1,8 @@
-import captainAmerica from "../../../../assets/captain-america.webp";
-import dc from "../../../../assets/dc.webp";
-import ironMan from "../../../../assets/iron-man.webp";
-import spiderMan from "../../../../assets/spider-man.webp";
-import starWars from "../../../../assets/star-wars.webp";
+import captainAmerica from "../../../../../assets/captain-america.webp";
+import dc from "../../../../../assets/dc.webp";
+import ironMan from "../../../../../assets/iron-man.webp";
+import spiderMan from "../../../../../assets/spider-man.webp";
+import starWars from "../../../../../assets/star-wars.webp";
 
 const Columns = () => {
   return (
