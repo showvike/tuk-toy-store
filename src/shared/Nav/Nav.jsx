@@ -17,14 +17,18 @@ const Nav = () => {
 
   return (
     <nav className="flex justify-between items-center">
+      {/* main nav stars */}
       <div>
         <ul className="flex gap-8 font-black text-xl items-center">
+          {/* default nav starts */}
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/all-toys">All Toys</Link>
           </li>
+          {/* default nav ends */}
+          {/* private nav starts */}
           {user && (
             <>
               <li>
@@ -35,9 +39,13 @@ const Nav = () => {
               </li>
             </>
           )}
+          {/* private nav ends */}
+          {/* default nav starts */}
           <li>
             <Link to="/blogs">Blogs</Link>
           </li>
+          {/* default nav ends */}
+          {/* conditional nav starts */}
           <li>
             {user ? (
               <div
@@ -59,8 +67,10 @@ const Nav = () => {
               </Link>
             )}
           </li>
+          {/* conditional nav starts */}
         </ul>
       </div>
+      {/* main nav ends */}
       {/* website logo and name starts */}
       <Link to="/">
         <div className="flex items-center gap-4">

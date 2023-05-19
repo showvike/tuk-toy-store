@@ -4,16 +4,19 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
-  const { loginWithEmail, loginWithGoogle } = useContext(AuthContext);
   const [error, setError] = useState("");
+  const { loginWithEmail, loginWithGoogle } = useContext(AuthContext);
+
   const navigate = useNavigate();
 
   const handleEmailLogin = (event) => {
     event.preventDefault();
+
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+
     loginWithEmail(email, password)
       .then((result) => {
         const user = result.user;
