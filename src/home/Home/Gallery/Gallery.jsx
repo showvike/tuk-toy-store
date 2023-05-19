@@ -2,7 +2,7 @@ import Rows from "./Rows/Rows";
 
 const Gallery = () => {
   return (
-    <section className="mt-12">
+    <section>
       <h2 className="my-8 text-5xl font-extrabold text-center">
         Some of Our Lego Toys
       </h2>

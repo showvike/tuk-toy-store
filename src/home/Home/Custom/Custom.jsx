@@ -1,8 +1,8 @@
-import custom from "../../assets/custom.webp";
+import custom from "../../../assets/custom.webp";
 
 const Custom = () => {
   return (
-    <div
+    <section
       className="hero min-h-screen mt-12 rounded-3xl"
       style={{
         backgroundImage: `url(${custom})`,
@@ -21,7 +21,7 @@ const Custom = () => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

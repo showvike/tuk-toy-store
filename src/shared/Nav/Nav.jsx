@@ -76,7 +76,7 @@ const Nav = () => {
         <div className="flex items-center gap-4">
           <h1 className="font-extrabold text-3xl">Tuk Toy Store</h1>
           <div>
-            <img className="w-24" src={logo} />
+            <img className="w-24 rounded-full" src={logo} />
           </div>
         </div>
       </Link>

@@ -11,13 +11,13 @@ import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="space-y-4">
-      <div className="grid grid-cols-4 items-center justify-items-center">
+    <footer className="mt-12 space-y-4">
+      <div className="grid grid-cols-4 justify-items-center">
         {/* div 1 starts */}
         <div className="space-y-8">
           <div className="flex items-center gap-4">
             <div>
-              <img className="w-24" src={logo} />
+              <img className="w-24 rounded-full" src={logo} />
             </div>
             <h1 className="font-extrabold text-3xl">Tuk Toy Store</h1>
           </div>
