@@ -1,4 +1,5 @@
 import {
+  FaAddressBook,
   FaBusinessTime,
   FaFacebook,
   FaInstagram,
@@ -32,6 +33,10 @@ const Footer = () => {
             <p className="flex items-center gap-4">
               <FaBusinessTime size={32} />
               14:00 - 22:00, Monday - Saturday, Sunday - closed
+            </p>
+            <p className="flex items-center gap-4">
+              <FaAddressBook size={32} />
+              000/0, Road No 0, Somewhere, Somewhere, Somewhere
             </p>
           </div>
           <div className="flex items-center gap-4">
