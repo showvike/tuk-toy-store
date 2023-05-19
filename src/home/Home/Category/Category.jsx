@@ -25,21 +25,21 @@ const Category = () => {
               tabIndex === 0 ? "bg-black" : "bg-[#6800fa]"
             }`}
           >
-            Marvel Toys
+            <button>Marvel Toys</button>
           </Tab>
           <Tab
             className={`text-white px-4 py-2 rounded font-semibold ${
               tabIndex === 1 ? "bg-black" : "bg-[#6800fa]"
             }`}
           >
-            DC Toys
+            <button>DC Toys</button>
           </Tab>
           <Tab
             className={`text-white px-4 py-2 rounded font-semibold ${
               tabIndex === 2 ? "bg-black" : "bg-[#6800fa]"
             }`}
           >
-            Star Wars Toys
+            <button>Star Wars Toys</button>
           </Tab>
         </TabList>
         <TabPanel>

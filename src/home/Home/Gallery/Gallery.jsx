@@ -15,6 +15,9 @@ const Gallery = () => {
           <button className="bg-[#6800fa] px-8 py-4 font-semibold rounded text-xl">
             Click Here
           </button>
+          <p className="text-5xl font-semibold text-white">
+            Click the button to explore!
+          </p>
         </div>
       </div>
     </section>
