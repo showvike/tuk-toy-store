@@ -21,8 +21,8 @@ const Card = ({ toy }) => {
         <img src={picture_url} />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{name}</h2>
-        <p>
+        <h2 className="card-title text-3xl font-extrabold">{name}</h2>
+        <p className="text-xl font-semibold">
           Price: $ {price}
           <br />
           Rating: {rating}
