@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Add from "../../Add/Add";
 import Blogs from "../../Blogs/Blogs";
 import Login from "../../Login/Login";
 import Register from "../../Register/Register";
@@ -48,6 +49,14 @@ const router = createBrowserRouter([
           fetch(
             `https://b7a11-toy-marketplace-server-side-showvike-showvike.vercel.app/toy/${params.id}`
           ),
+      },
+      {
+        path: "/add",
+        element: (
+          <PrivateRoute>
+            <Add />
+          </PrivateRoute>
+        ),
       },
     ],
   },

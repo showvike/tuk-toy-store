@@ -35,7 +35,7 @@ const Nav = () => {
                 <Link to="/my-toys">My Toys</Link>
               </li>
               <li>
-                <Link to="/add-a-toy">Add A Toy</Link>
+                <Link to="/add">Add A Toy</Link>
               </li>
             </>
           )}

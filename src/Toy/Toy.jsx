@@ -19,7 +19,7 @@ const Toy = () => {
       <div className="divider mb-12"></div>
       <h2 className="font-extrabold text-3xl text-center mb-8">Toy Details</h2>
       <div className="card lg:card-side bg-base-100 shadow-xl">
-        <figure>
+        <figure className="w-1/2">
           <img src={picture_url} />
         </figure>
         <div className="card-body items-center justify-center gap-4">
