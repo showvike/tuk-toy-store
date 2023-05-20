@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Add from "../../Add/Add";
 import Blogs from "../../Blogs/Blogs";
+import Error from "../../Error/Error";
 import Login from "../../Login/Login";
 import Register from "../../Register/Register";
 import Toy from "../../Toy/Toy";
@@ -81,6 +82,7 @@ const router = createBrowserRouter([
           ),
       },
     ],
+    errorElement: <Error />,
   },
 ]);
 
