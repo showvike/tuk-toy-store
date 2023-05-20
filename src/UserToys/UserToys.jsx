@@ -36,7 +36,13 @@ const UserToys = () => {
           </thead>
           <tbody>
             {userToys.map((userToy, index) => (
-              <UserToy key={userToy._id} userToy={userToy} index={index} />
+              <UserToy
+                key={userToy._id}
+                userToy={userToy}
+                index={index}
+                userToys={userToys}
+                setUserToys={setUserToys}
+              />
             ))}
           </tbody>
           <tfoot>
