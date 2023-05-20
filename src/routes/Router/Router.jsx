@@ -5,6 +5,7 @@ import Login from "../../Login/Login";
 import Register from "../../Register/Register";
 import Toy from "../../Toy/Toy";
 import Toys from "../../Toys/Toys";
+import UserToys from "../../UserToys/UserToys";
 import Home from "../../home/Home/Home";
 import Main from "../../layout/Main/Main";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
@@ -55,6 +56,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Add />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/user_toys",
+        element: (
+          <PrivateRoute>
+            <UserToys />
           </PrivateRoute>
         ),
       },

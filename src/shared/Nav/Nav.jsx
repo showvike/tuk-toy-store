@@ -32,7 +32,7 @@ const Nav = () => {
           {user && (
             <>
               <li>
-                <Link to="/my-toys">My Toys</Link>
+                <Link to="/user_toys">My Toys</Link>
               </li>
               <li>
                 <Link to="/add">Add A Toy</Link>
