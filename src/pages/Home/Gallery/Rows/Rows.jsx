@@ -4,10 +4,12 @@ const Rows = () => {
   return (
     <div className="carousel carousel-center rounded-box flex-col md:flex-row">
       <Columns />
-      <Columns />
-      <Columns />
-      <Columns />
-      <Columns />
+      <div className="hidden md:block">
+        <Columns />
+        <Columns />
+        <Columns />
+        <Columns />
+      </div>
     </div>
   );
 };
