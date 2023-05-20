@@ -1,17 +1,15 @@
 import { useContext } from "react";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../../../providers/AuthProvider";
 
 const Card = ({ toy }) => {
-  const { picture_url, name, price, rating } = toy;
+  const { picture_url, name, price, rating, _id } = toy;
   const { user } = useContext(AuthContext);
-  const navigate = useNavigate();
 
   const handleViewDetails = () => {
     if (!user) {
       toast.error("You have to log in first to view details.");
-      navigate("/login");
     }
   };
 
@@ -28,9 +26,11 @@ const Card = ({ toy }) => {
           Rating: {rating}
         </p>
         <div className="card-actions justify-end">
-          <button onClick={handleViewDetails} className="btn btn-info">
-            View Details
-          </button>
+          <Link to={`/toy/${_id}`}>
+            <button onClick={handleViewDetails} className="btn btn-info">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>

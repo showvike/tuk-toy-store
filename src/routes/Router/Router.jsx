@@ -6,6 +6,7 @@ import Toy from "../../Toy/Toy";
 import Toys from "../../Toys/Toys";
 import Home from "../../home/Home/Home";
 import Main from "../../layout/Main/Main";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/toy/:id",
-        element: <Toy />,
+        element: (
+          <PrivateRoute>
+            <Toy />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://b7a11-toy-marketplace-server-side-showvike-showvike.vercel.app/toy/${params.id}`
+          ),
       },
     ],
   },
