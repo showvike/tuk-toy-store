@@ -3,6 +3,7 @@ import Blogs from "../../Blogs/Blogs";
 import Login from "../../Login/Login";
 import Register from "../../Register/Register";
 import Toy from "../../Toy/Toy";
+import Toys from "../../Toys/Toys";
 import Home from "../../home/Home/Home";
 import Main from "../../layout/Main/Main";
 
@@ -26,6 +27,14 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs />,
+      },
+      {
+        path: "/toys",
+        element: <Toys />,
+        loader: () =>
+          fetch(
+            "https://b7a11-toy-marketplace-server-side-showvike-showvike.vercel.app/toys"
+          ),
       },
       {
         path: "/toy/:id",

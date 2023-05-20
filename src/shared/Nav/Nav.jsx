@@ -25,7 +25,7 @@ const Nav = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/all-toys">All Toys</Link>
+            <Link to="/toys">All Toys</Link>
           </li>
           {/* default nav ends */}
           {/* private nav starts */}
