@@ -7,6 +7,7 @@ import {
   FaPhoneAlt,
   FaTwitterSquare,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Footer = () => {
@@ -15,12 +16,14 @@ const Footer = () => {
       <div className="grid grid-cols-4 justify-items-center">
         {/* div 1 starts */}
         <div className="space-y-8">
-          <div className="flex items-center gap-4">
-            <div>
-              <img className="w-24 rounded-full" src={logo} />
+          <Link to="/">
+            <div className="flex items-center gap-4">
+              <div>
+                <img className="w-24 rounded-full" src={logo} />
+              </div>
+              <h1 className="font-extrabold text-3xl">Tuk Toy Store</h1>
             </div>
-            <h1 className="font-extrabold text-3xl">Tuk Toy Store</h1>
-          </div>
+          </Link>
           <div className="space-y-4">
             <p className="flex items-center gap-4">
               <FaPhoneAlt size={24} />

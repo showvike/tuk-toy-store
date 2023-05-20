@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { toast } from "react-hot-toast";
-import { AuthContext } from "../providers/AuthProvider";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Add = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleAdd = (event) => {
     event.preventDefault();
@@ -47,6 +49,7 @@ const Add = () => {
         if (data.insertedId) {
           toast.success(`${name} is added`);
           form.reset();
+          navigate("/user_toys");
         }
       });
   };

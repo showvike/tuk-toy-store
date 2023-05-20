@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
-import Add from "../../Add/Add";
-import Blogs from "../../Blogs/Blogs";
-import Error from "../../Error/Error";
-import Login from "../../Login/Login";
-import Register from "../../Register/Register";
-import Toy from "../../Toy/Toy";
-import Toys from "../../Toys/Toys";
-import Update from "../../Update/Update";
-import UserToys from "../../UserToys/UserToys";
-import Home from "../../home/Home/Home";
 import Main from "../../layout/Main/Main";
+import Add from "../../pages/Add/Add";
+import Blogs from "../../pages/Blogs/Blogs";
+import Error from "../../pages/Error/Error";
+import Home from "../../pages/Home/Home";
+import Login from "../../pages/Login/Login";
+import Register from "../../pages/Register/Register";
+import Toy from "../../pages/Toy/Toy";
+import Toys from "../../pages/Toys/Toys";
+import Update from "../../pages/Update/Update";
+import UserToys from "../../pages/UserToys/UserToys";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
