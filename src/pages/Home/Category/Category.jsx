@@ -19,7 +19,7 @@ const Category = () => {
     <section>
       <h2 className="my-8 text-5xl font-extrabold text-center">Category</h2>
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-        <TabList className="flex justify-around">
+        <TabList className="flex justify-around gap-4">
           <Tab
             className={`text-white px-4 py-2 rounded font-semibold ${
               tabIndex === 0 ? "bg-black" : "bg-[#6800fa]"

@@ -13,7 +13,7 @@ import logo from "../../assets/logo.png";
 const Footer = () => {
   return (
     <footer className="mt-12 space-y-4">
-      <div className="grid grid-cols-4 justify-items-center">
+      <div className="grid md:grid-cols-4 md:justify-items-center gap-4">
         {/* div 1 starts */}
         <div className="space-y-8">
           <Link to="/">

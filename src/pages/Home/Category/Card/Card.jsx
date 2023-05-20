@@ -14,7 +14,7 @@ const Card = ({ toy }) => {
   };
 
   return (
-    <div className="card w-96 h-96 bg-base-100 shadow-xl image-full">
+    <div className="card md:w-96 md:h-96 bg-base-100 shadow-xl image-full">
       <figure>
         <img src={picture_url} />
       </figure>

@@ -16,10 +16,10 @@ const Nav = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center">
+    <nav className="flex flex-col-reverse md:flex-row justify-between items-center gap-4">
       {/* main nav stars */}
       <div>
-        <ul className="flex gap-8 font-black text-xl items-center">
+        <ul className="flex flex-col md:flex-row gap-8 font-black text-xl items-center">
           {/* default nav starts */}
           <li>
             <Link to="/">Home</Link>
@@ -73,7 +73,7 @@ const Nav = () => {
       {/* main nav ends */}
       {/* website logo and name starts */}
       <Link to="/">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 flex-col-reverse md:flex-row">
           <h1 className="font-extrabold text-3xl">Tuk Toy Store</h1>
           <div>
             <img className="w-24 rounded-full" src={logo} />
