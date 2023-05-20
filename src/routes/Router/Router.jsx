@@ -5,6 +5,7 @@ import Login from "../../Login/Login";
 import Register from "../../Register/Register";
 import Toy from "../../Toy/Toy";
 import Toys from "../../Toys/Toys";
+import Update from "../../Update/Update";
 import UserToys from "../../UserToys/UserToys";
 import Home from "../../home/Home/Home";
 import Main from "../../layout/Main/Main";
@@ -66,6 +67,18 @@ const router = createBrowserRouter([
             <UserToys />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/update/:id",
+        element: (
+          <PrivateRoute>
+            <Update />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://b7a11-toy-marketplace-server-side-showvike-showvike.vercel.app/toy/${params.id}`
+          ),
       },
     ],
   },

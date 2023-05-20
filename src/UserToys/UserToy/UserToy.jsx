@@ -25,7 +25,7 @@ const UserToy = ({ userToy, index }) => {
       <td>{available_quantity}</td>
       <td>{detail_description}</td>
       <th>
-        <Link to={`/toy/${_id}`}>
+        <Link to={`/update/${_id}`}>
           <button className="btn btn-warning">Update</button>
         </Link>
       </th>
