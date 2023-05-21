@@ -5,6 +5,7 @@ import UserToy from "./UserToy/UserToy";
 const UserToys = () => {
   const { user } = useContext(AuthContext);
   const [userToys, setUserToys] = useState([]);
+  const [option, setOption] = useState("Sort By Price");
 
   useEffect(() => {
     fetch(
@@ -14,11 +15,33 @@ const UserToys = () => {
       .then((data) => setUserToys(data));
   }, [user]);
 
+  const handleSort = (event) => {
+    setOption(event.target.value);
+    fetch(
+      `https://b7a11-toy-marketplace-server-side-showvike-showvike.vercel.app/toys?seller_email=${user.email}&price=${event.target.value}`
+    )
+      .then((res) => res.json())
+      .then((data) => setUserToys(data));
+  };
+
   return (
     <>
       <div className="divider mb-12"></div>
       <div className="overflow-x-auto mt-12">
         <h2 className="text-3xl font-extrabold text-center mb-8">My Toys</h2>
+        <div className="mb-4 text-right">
+          <select
+            className="select select-bordered w-full max-w-xs"
+            value={option}
+            onChange={handleSort}
+          >
+            <option disabled value="Sort By Price">
+              Sort By Price
+            </option>
+            <option value="-1">Descending</option>
+            <option value="1">Ascending</option>
+          </select>
+        </div>
         <table className="table table-compact w-full text-center">
           <thead>
             <tr>
