@@ -1,5 +1,6 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
+import useTitle from "../../hooks/useTitle";
 import Banner from "./Banner/Banner";
 import Category from "./Category/Category";
 import Custom from "./Custom/Custom";
@@ -8,6 +9,8 @@ import Upload from "./Upload/Upload";
 AOS.init();
 
 function Home() {
+  useTitle("Home");
+
   return (
     <div data-aos="fade-up">
       <div className="divider mb-12"></div>

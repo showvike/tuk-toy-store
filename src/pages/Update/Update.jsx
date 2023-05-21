@@ -1,10 +1,13 @@
 import { toast } from "react-hot-toast";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const Update = () => {
   const toy = useLoaderData();
   const { name, price, available_quantity, detail_description, _id } = toy;
   const navigate = useNavigate();
+
+  useTitle("Update");
 
   const handleUpdate = (event) => {
     event.preventDefault();

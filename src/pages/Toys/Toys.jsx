@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 import Row from "./Row/Row";
 
 const Toys = () => {
   const loadedToys = useLoaderData();
   const [toys, setToys] = useState([]);
   const inputRef = useRef(null);
+
+  useTitle("All Toys");
 
   useEffect(() => {
     setToys(loadedToys);

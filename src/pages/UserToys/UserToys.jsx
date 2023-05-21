@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../providers/AuthProvider";
 import UserToy from "./UserToy/UserToy";
 
@@ -6,6 +7,8 @@ const UserToys = () => {
   const { user } = useContext(AuthContext);
   const [userToys, setUserToys] = useState([]);
   const [option, setOption] = useState("Sort By Price");
+
+  useTitle("My Toys");
 
   useEffect(() => {
     fetch(

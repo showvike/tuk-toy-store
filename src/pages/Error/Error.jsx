@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import error from "../../assets/error.png";
+import useTitle from "../../hooks/useTitle";
 
 const Error = () => {
+  useTitle("Error");
+
   return (
     <div className="space-y-8">
       <div className="text-center">
